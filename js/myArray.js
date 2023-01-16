@@ -1,21 +1,25 @@
+// Написати функцію, яка приймає масив чисел
+// і повертає true, якщо в цьому масиві є два однакових числа поспіль
+// Якщо не має - повертає false, якщо масив порожній - теж повертає false
+
 /**
  *
  * @param {[number]} array
  * @returns {boolean}
  */
 function compareNextValue(array) {
-    if (array.length < 2) {
-      return false;
-    }
-    for (let index = 1; index < array.length; index++) {
-      if (array[index] === array[index - 1]) {
-        return true;
-      }
-    }
+  if (array.length < 2) {
     return false;
   }
-  
-  console.log(compareNextValue([0,0]));
+  for (let index = 1; index < array.length; index++) {
+    if (array[index] === array[index - 1]) {
+      return true;
+    }
+  }
+  return false;
+}
+
+console.log(compareNextValue([0, 0]));
 
 // function MyArrayPrototype() {
 //   this.push = function () {
